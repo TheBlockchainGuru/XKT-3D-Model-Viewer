@@ -13,7 +13,7 @@ export const UploadFiles = () => {
             data.append('file', allFiles[i].file);
         }
         console.error(allFiles[0]);
-        axios.post("http://localhost:4000/upload", data).then(res => {
+        axios.post("http://178.62.53.223:4000/upload", data).then(res => {
 
         }).catch(err => {
             console.warn(err);
