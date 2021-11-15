@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/style.css"],"names":[],"mappings":"AAAA,KACI,eACJ,CAEA,QACI,sBACJ","file":"main.af251d29.chunk.css","sourcesContent":["body {\r\n    overflow: hidden;\r\n}\r\n\r\n.border {\r\n    border: unset !important;\r\n}"]}

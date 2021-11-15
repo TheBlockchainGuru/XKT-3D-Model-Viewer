@@ -14,7 +14,7 @@ app.use(cors());
 
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, '../frontend/public/xkt')
+		cb(null, '../frontend/build/xkt')
 	},
 	filename: function (req, file, cb) {
 		cb(null, `model.xkt`)
