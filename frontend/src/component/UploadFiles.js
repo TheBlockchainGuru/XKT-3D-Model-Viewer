@@ -3,7 +3,10 @@ import 'react-dropzone-uploader/dist/styles.css';
 import Dropzone from 'react-dropzone-uploader';
 import axios from 'axios';
 
+import store from '../store/store';
+
 export const UploadFiles = () => {
+    const setIsLoading = store(state => state.setIsLoading);
 
     const getUploadParams = ({ meta }) => { return { url: 'https://httpbin.org/post' } }
 
@@ -13,8 +16,11 @@ export const UploadFiles = () => {
             data.append('file', allFiles[i].file);
         }
         console.error(allFiles[0]);
-        axios.post("http://178.62.53.223:4000/upload", data).then(res => {
 
+        setIsLoading(true);
+
+        axios.post("http://178.62.53.223:4000/upload", data).then(res => {
+            window.location.reload();
         }).catch(err => {
             console.warn(err);
         });

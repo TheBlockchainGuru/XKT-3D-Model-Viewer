@@ -12,6 +12,10 @@ const store = create(set => ({
     updateCurrentModel: (value) => set(produce(state => {
         state.currentModel = {...value};
     })),
+    isLoading: false,
+    setIsLoading: (value) => set(produce(state => {
+        state.isLoading = value;
+    }))
 }))
 
 export default store
