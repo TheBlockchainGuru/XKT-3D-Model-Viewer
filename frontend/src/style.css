@@ -1,0 +1,7 @@
+body {
+    overflow: hidden;
+}
+
+.border {
+    border: unset !important;
+}
